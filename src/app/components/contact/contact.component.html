@@ -1,0 +1,95 @@
+<div class="contact-me">
+    <div class="contact-content">
+        <h2>
+            Contacts
+        </h2>
+        <h3>
+            Got a problem to solve?
+        </h3>
+        <p class="description-1">
+            Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
+            projects with my work.
+        </p>
+        <p class="description-2">
+            Need a Frontend developer? Contact me!
+        </p>
+    </div>
+    <form #myForm="ngForm" (ngSubmit)="submitForm()" class="all-inputs" novalidate ngNativeValidate #myEmailSendingForm>
+        <!--#myEmailForm-->
+        <div style="position: relative;" [class.clicked]="isClickedName">
+            <label for="name"></label>
+            <input [(ngModel)]="formData.name" id="name" class="input" placeholder="Your name" type="text" name="name"
+                (focus)="onFocus('name')" (blur)="onBlur()" #nameField required>
+            <span class="pseudo-element-placeholder" *ngIf="isClickedName">
+                Your name
+            </span>
+            <div class="info" *ngIf="isFieldInvalid('name') && isFieldTouched('name')">
+                <span>
+                    **Please enter your name.**
+                </span>
+            </div>
+            <img id="check-true-name" class="check-true-img" [src]="checkTrue" *ngIf="showCheckImage('name', true)">
+            <img id="check-false-name" class="check-false-img" [src]="checkFalse"
+                *ngIf="isFieldInvalid('name') && isFieldTouched('name')">
+        </div>
+        <div style="position: relative;" [class.clicked]="isClickedEmail">
+            <label for="email"></label>
+            <input [(ngModel)]="formData.email" id="email" class="input" placeholder="Your email" type="email"
+                (focus)="onFocus('email')" (blur)="onBlur()" name="email" #emailField required email>
+            <span class="pseudo-element-placeholder" *ngIf="isClickedEmail">
+                Your email
+            </span>
+            <div class="info" *ngIf="isFieldInvalid('email') && isFieldTouched('email')">
+                <span>
+                    **Please enter a valid email address.**
+                </span>
+            </div>
+            <img id="true-email" class="check-true-img" [src]="checkTrue" *ngIf="showCheckImage('email', true)">
+            <img id="check-false-email" class="check-false-img" [src]="checkFalse"
+                *ngIf="isFieldInvalid('email') && isFieldTouched('email')">
+        </div>
+        <div style="position: relative;" [class.clicked]="isClickedMessage">
+            <label for="message"></label>
+            <textarea [(ngModel)]="formData.message" required minlength="10" id="message" class="textarea" type="text"
+                (focus)="onFocus('message')" (blur)="onBlur()" name="message" placeholder="Your message"
+                #messageField></textarea>
+            <span class="pseudo-element-placeholder" *ngIf="isClickedMessage">
+                Your message
+            </span>
+            <div class="info" *ngIf="isFieldInvalid('message') && isFieldTouched('message')">
+                <span>
+                    **Please enter a message with at least 10 characters.**
+                </span>
+            </div>
+            <img id="check-true-message" class="check-true-img" style="top: 7%;" [src]="checkTrue"
+                *ngIf="showCheckImage('message', true)">
+            <img id="check-false-message" class="check-false-img" style="top: 7%" [src]="checkFalse"
+                *ngIf="isFieldInvalid('message') && isFieldTouched('message')">
+        </div>
+        <div id="progressBar" class="bar-position d-none">
+            <div id="progress-number" class="number"></div>
+            <div class="progress-bar">
+                <div id="progress" class="progress-color"></div>
+            </div>
+        </div>
+        <div class="send-button-div">
+            <button id="send-button" class="btn" type="submit" [disabled]="myForm.invalid" #sendButton>
+                <span>
+                    Say hello ;)
+                </span>
+            </button>
+        </div>
+    </form>
+    <img class="ball-1" src="/assets/img/Ellipse-9.png">
+    <img class="ball-2" src="/assets/img/Ellipse-9.png">
+    <a (click)="scrollTop()">
+        <img class="go-up-button" src="/assets/img/icons/go-up-button.png">
+    </a>
+    <div class="sending-mail-info-div">
+        <div class="sending-mail-info" *ngIf="sendMailFinishInfo">
+            <span>
+                **Send Mail Finish**
+            </span>
+        </div>
+    </div>
+</div>

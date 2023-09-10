@@ -1,0 +1,47 @@
+.ball-div-1 {
+    position: relative;
+    top: -103px;
+    display: flex;
+    justify-content: center;
+
+    img {
+        height: 206px;
+        width: 206px;
+    }
+
+    @media (max-width: 1200px) {
+        top: -80px;
+
+        img {
+            width: 156px;
+            height: 156px;
+        }
+    }
+
+    @media (max-width: 500px) {
+
+        img {
+            width: 136px;
+            height: 136px;
+        }
+    }
+}
+
+.ball-div-2 {
+    position: absolute;
+    right: 22.5%;
+    bottom: -18%;
+
+    img {
+        width: 82px;
+        height: 82px;
+    }
+
+    @media (max-width: 500px) {
+
+        img {
+            width: 62px;
+            height: 62px;
+        }
+    }
+}

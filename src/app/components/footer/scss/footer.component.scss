@@ -1,0 +1,40 @@
+.footer-background {
+    height: 291px;
+    background-image: url('/assets/img/Frame-43.png');
+    background-size: cover;
+    margin-top: 150px;
+}
+
+.footer {
+    position: absolute;
+    min-height: 291px;
+    width: 82%;
+    left: 9%;
+    right: 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 850px) {
+        flex-direction: column;
+    }
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.footer-impressum {
+    text-align: center;
+    p {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 120%;
+        color: #FFFFFF;
+    }
+}
+

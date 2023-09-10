@@ -1,0 +1,219 @@
+.all-inputs {
+    min-height: 480px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 220px;
+
+    .input {
+        width: 98%;
+        background-color: rgb(255, 255, 255) !important;
+        border: 1px solid #5988FF;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        border-color: none;
+        outline: none;
+        font-size: 16px;
+        font-family: montserrat;
+        padding: 20px 0px 20px 10px;
+        color: rgb(117, 117, 117);
+    }
+
+    .textarea {
+        width: 98%;
+        min-height: 202px;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid #5988FF;
+        border-radius: 10px;
+        resize: none;
+        margin-bottom: 30px;
+        outline: none;
+        font-size: 16px;
+        font-family: montserrat;
+        padding: 20px 0px 20px 10px;
+        color: rgb(117, 117, 117);
+    }
+
+    @media (max-width: 1000px) {
+        width: 100%;
+        margin-top: 15px;
+        padding-left: 0px;
+    }
+}
+
+.check-true-img {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 22%;
+    right: 2.6%;
+    animation: move-true 800ms ease-in-out forwards;
+}
+
+.check-false-img {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 14%;
+    right: 2.6%;
+    animation: move-true 800ms ease-in-out forwards;
+}
+
+@keyframes move-true {
+    0% {
+        transform: translateX(-30%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(30%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.d-none {
+    display: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.bar-position {
+    flex-direction: column;
+    align-items: center;
+
+    .progress-bar {
+        display: flex;
+        width: 50%;
+        min-height: 20px;
+        border-radius: 4px;
+        background-color: rgb(232, 240, 254);
+
+        .progress-color {
+            width: 0%;
+            border-radius: 4px;
+            background-color: #5988FF;
+            transition: width 0.3s ease-in-out;
+        }
+    }
+}
+
+.number {
+    font-family: montserrat;
+    font-size: 20px;
+}
+
+.pseudo-element-placeholder {
+    position: absolute;
+    top: -10px;
+    left: 16px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    font-family: Poppins;
+    color: rgb(117, 117, 117);
+    animation: slide-out 300ms ease-in-out forwards;
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+.clicked .pseudo-element-placeholder {
+    display: block;
+}
+
+.clicked #name::placeholder {
+    visibility: hidden;
+}
+
+.info {
+    width: 99%;
+    background-color: rgb(245, 42, 32);
+    margin-bottom: 16px;
+    border-radius: 10px;
+    padding: 10px 0px 10px 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: move-info 1s ease-in-out forwards;
+
+    span {
+        font-size: 16px;
+        font-family: montserrat;
+        color: #FFFFFF;
+    }
+}
+
+@keyframes move-info {
+    0% {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(10%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.sending-mail-info-div {
+    width: 100%;
+    position: absolute;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+
+    .sending-mail-info {
+        width: 50%;
+        //mobile 100% width
+        padding: 20px;
+        background-color: rgb(112, 230, 28);
+        //bottom: -24%; mobil modus
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        animation: move-mail-info 1s ease-in-out;
+        text-align: center;
+    
+        span {
+            font-size: 22px;
+            font-family: montserrat;
+            color: #FFFFFF;
+        }
+    }
+}
+
+@keyframes move-mail-info {
+    0% {
+        transform: translateY(200%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-20%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,24 @@
+.footer-icons {
+    min-width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        height: 30px;
+        width: 30px;
+        transition: 300ms all ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.2) translate(10px);
+        }
+    }
+
+    @media (max-width: 850px) {
+        img {
+            padding-left: 0px;
+            padding: 10px;
+        }
+    }
+}

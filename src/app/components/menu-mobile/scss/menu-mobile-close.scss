@@ -1,0 +1,24 @@
+.close-img {
+    width: 30px;
+    height: 27.72px;
+    position: fixed;
+    top: 9%;
+    right: 9%;
+    z-index: 999;
+}
+
+.mobile-menu-close {
+    animation: close-menu-animation 500ms backwards;
+}
+
+@keyframes close-menu-animation {
+    from {
+        right: 0%;
+        width: 100%;
+    }
+
+    to {
+        right: -100%;
+        width: 0%;
+    }
+}

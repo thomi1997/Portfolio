@@ -1,0 +1,32 @@
+.project-detail {
+    width: 50%;
+    margin-left: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h2 {
+        font-family: 'Baloo';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 45px;
+        line-height: 120%;
+        color: #5988FF;
+    }
+
+    @media (max-width: 1500px) {
+        margin-top: 0px;
+        margin-left: 22px;
+
+        h2 {
+            line-height: 80%;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        width: 100%;
+        margin-left: 0px;
+        text-align: center;
+        align-items: center;
+    }
+}

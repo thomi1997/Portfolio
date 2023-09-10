@@ -1,0 +1,85 @@
+.about-me {
+    height: auto;
+    width: 82%;
+    position: relative;
+    left: 9%;
+    right: 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: -100px;
+
+    h2 {
+        font-family: 'Baloo';
+        color: rgba(89, 136, 255, 1);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 121px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        width: 50%;
+    }
+
+    p {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 120%;
+        color: #000000;
+    }
+
+    @media (max-width: 1500px) {
+        height: 450px;
+
+        h2 {
+            font-size: 80px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        height: 350px;
+        flex-direction: column;
+        margin-top: -50px;
+        padding-bottom: 150px;
+
+        h2 {
+            font-size: 64px;
+            width: 100%;
+        }
+
+        p {
+            font-size: 23px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        height: 450px;
+    }
+
+    @media (max-width: 410px) {
+        margin-top: -20px;
+
+        h2 {
+            font-size: 46px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 250px) {
+        h2 {
+            font-size: 36px;
+        }
+    }
+}
+
+.width-inherit {
+    width: inherit;
+}

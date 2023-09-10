@@ -1,0 +1,12 @@
+<div id="mobile-menu" class="mobile-menu d-none">
+    <a (click)="scrollToHeader()">
+        <img class="mobile-menu-logo" src="/assets/img/logo-black.png">
+    </a>
+    <div class="menu-links">
+        <a (click)="scrollToAboutMe()">About me</a>
+        <a (click)="scrollToSkillsSet()">Skills set</a>
+        <a (click)="scrollToMyWork()">My work</a>
+    </div>
+</div>
+<img id="burger" (click)="openMobileMenu()" class="open-img" src="/assets/img/burger-1.png">
+<img id="close" (click)="closeMobileMenu()" class="close-img d-none" src="/assets/img/close-final.png">
